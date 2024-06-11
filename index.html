@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a1bd5d6a81.js"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/estilos.css">
+        <title>Primer Desafio JS</title>
+    </head>
+    <body>
+        <!-- DIV PARA GRID ESCRITORIO-->
+        <div class="grid-escritorio">
+            <!--MENU DE NAVEGACION-->
+            <header>
+                <nav class="navbar">
+                    <div class="navbar-container">
+                        <a href="#" class="marca">Squares</a>
+                        <input type="checkbox" id="menu-toggle"
+                            class="menu-toggle">
+                        <label for="menu-toggle"
+                            class="menu-icon">&#9776;</label>
+                        <ul class="nav-links">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <div class="carrito">
+                                <i class="fa-solid fa-cart-shopping">
+                                        $<span
+                                            class="total">0.00</span></div></i>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- SECCION DE FILTROS DE BUSQUEDA -->
+            <section>
+                <div class="filtros">
+                    <div class="opciones">
+                        <label for="categorias">Ordenar por:</label>
+                    </div>
+                    <select id="categorias">
+                        <option value="destacados">Destacados</option>
+                        <option value="mejor-puntuados">Mejor Puntuados</option>
+                        <option value="precio-ascendente">Precio
+                            ascendente</option>
+                        <option value="precio-descendente">Precio
+                            descendente</option>
+                    </select>
+                </div>
+            </section>
+            <!-- SECCION PRINCIPAL -->
+            <main class="contenedor-grid">
+                <div class="producto">
+                    <img src="assets/imgs/bombon.jpg"
+                        alt="foto de cuadro bombon">
+                    <h3>Cuadro Bombon</h3>
+                    <p>Precio: $<span>8.500</span></p>
+                        <div class="controles">
+                            <button id="resta" onclick="restar()" id="menos">-</button>
+                            <span class="cantidad">0</span>
+                            <button id="suma" onclick="sumar()" id="mas">+</button>
+                            <button onclick="compraPrompt()">Comprar</button>
+                        </div>
+                </div>
+            </main>
+            <!-- PAGINADOR -->
+            <div class="paginador">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+            <!-- FOOTER -->
+            <footer class="pie-de-pagina">
+                <a href="https://www.facebook.com/?locale=es_LA"><i
+                        class="fa-brands fa-square-facebook fa-xl"></i></a></i>
+            <a href="https://www.instagram.com/"><i
+                    class="fa-brands fa-instagram fa-xl"></i></a>
+            <p> &copy; Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="./assets/js/index.js">
+    </script>
+    </body>
+</html>

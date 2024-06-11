@@ -1,0 +1,248 @@
+body {
+    font-family: "roboto", sans-serif;
+}
+
+/* MENU DE NAVEGACION */
+header {
+    grid-area: a;
+}
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.marca {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+.menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    display: block;
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+}
+.nav-links li {
+    margin: 0;
+    text-align: center;
+}
+.nav-links a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+}
+.nav-links a:hover {
+    background-color: #575757;
+}
+.menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+.menu-toggle {
+    display: none;
+}
+.carrito {
+    display: flex;
+    padding: 20px;
+    margin-left: 150px;
+}
+
+/* SECCION FILTROS DE BUSQUEDA */
+
+.filtros {
+   grid-area: b;
+   background-color: #000;
+   color: #fff;
+   font-size: 1.5em;
+   padding-top:  30px;
+   padding-bottom: 30px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+.opciones {
+    padding: 15px;
+}
+#categorias {
+    color: #000;
+    padding: 10px;
+    width: 40%;
+    align-self: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* SECCION PRINCIPAL */
+
+.contenedor-grid {
+    grid-area: c;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.producto {
+   padding: 20px 0px 20px 0px;
+   text-align: center;
+   background-color: #a2a0a055;
+   color: white;
+   border: solid black 2px;
+}
+.producto img {
+    width: 50%;
+}
+button {
+    padding: 10px;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    box-shadow: 0 10px 10px 0 #caf5535b;
+}
+button:hover {
+    background-color: white;
+    color:black;
+    box-shadow: 0 10px 10px 0 #caf553;
+}
+
+/* PAGINADOR */
+
+.paginador {
+    grid-area: d;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    padding-bottom: 60px;
+}
+.paginador a {
+    color: #fff;
+    float: left;
+    text-decoration: none;
+    padding: 15px;
+}
+.paginador a:hover {
+    box-shadow: 0 10px 10px 0 #caf553;
+}
+
+/* FOOTER */
+
+footer {
+    grid-area: e;
+    background-color: #333;
+    color: #fff;
+    margin-top: 0px;
+    padding: 20px;
+    text-align: center;
+}
+.pie-de-pagina i {
+    padding: 15px;
+}
+.pie-de-pagina a:link, :visited, :active  {
+    color: #fff;
+}
+.pie-de-pagina a:hover {
+    color:#000;
+    box-shadow: 0 15px 15px 0 #caf553;
+    padding-bottom: 5px;
+}
+.pie-de-pagina p {
+    font-size: 1.5em;
+}
+
+/* TABLETS */
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+    .nav-links li {
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+    .nav-links a {
+        display: inline-block;
+        padding: 8px 12px;
+    }
+    .contenedor-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* ESCRITORIO */
+
+@media (min-width: 1200px){
+    .grid-escritorio {
+        display: grid;
+        grid-template-columns: 0.4fr 1fr;
+        gap: 0;
+        grid-template-areas:
+        "a b"
+        "a c"
+        "e d"
+        ;
+    }
+    header {
+        width:100%;
+    }
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .marca {
+        font-size: 2em;
+    }
+    .navbar {
+        height: 100%;
+    }
+    .nav-links {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .carrito {
+        margin-left: 25px;
+    }
+    section {
+        height: 10vh;
+        padding: 0;
+    }
+    .filtros {
+        padding: 0;
+    }
+    .contenedor-grid {
+        margin-top: 18px;
+        padding-top: 50px;
+        grid-template-columns: auto auto auto auto;
+        align-items: flex-start;
+    }
+}
+
